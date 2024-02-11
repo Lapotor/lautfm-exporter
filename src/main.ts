@@ -28,5 +28,5 @@ metricServer.get('/metrics', async (req, res) => {
 });
 
 metricServer.listen(config.port, () => {
-  console.log('🚨 Prometheus listening on port 9991 /metrics');
+  console.log(`🚨 Prometheus listening on port ${config.port} /metrics`);
 });

@@ -1,6 +1,6 @@
 {
   "name": "lautfm-exporter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Prometheus exporter to fetch the laut.fm public api",
   "scripts": {
     "build": "tsc -p tsconfig.prod.json",

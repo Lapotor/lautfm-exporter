@@ -1,11 +1,11 @@
-import { fetchCurrentSong, fetchStation, fetchStationListeners } from '../api';
+import { fetchCurrentSong, fetchStation, fetchStationListeners } from 'api';
 import {
   lautfm_station_active,
   lautfm_station_current_song,
   lautfm_station_listeners,
   lautfm_station_live,
   lautfm_station_position,
-} from '../metrics';
+} from 'metrics';
 
 export async function collectStationMetrics(station: string): Promise<void> {
   const stationResponse = await fetchStation(station);

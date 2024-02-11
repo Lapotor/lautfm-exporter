@@ -10,11 +10,11 @@ import { LautFmSong, LautFmStation } from 'types';
 export async function fetchStation(
   station: string
 ): Promise<LautFmStation | undefined> {
-  const result = await axios({
+  const result = await axios<LautFmStation>({
     url: `${config.baseUrl}/station/${station}`,
   });
   if (result.status === 200) {
-    return result.data as LautFmStation;
+    return result.data;
   } else {
     return undefined;
   }
@@ -28,11 +28,11 @@ export async function fetchStation(
 export async function fetchCurrentSong(
   station: string
 ): Promise<LautFmSong | undefined> {
-  const result = await axios({
+  const result = await axios<LautFmSong>({
     url: `${config.baseUrl}/station/${station}/current_song`,
   });
   if (result.status === 200) {
-    return result.data as LautFmSong;
+    return result.data;
   } else {
     return undefined;
   }
@@ -46,11 +46,11 @@ export async function fetchCurrentSong(
 export async function fetchLastSongs(
   station: string
 ): Promise<LautFmSong[] | undefined> {
-  const result = await axios({
+  const result = await axios<LautFmSong[]>({
     url: `${config.baseUrl}/station/${station}/last_songs`,
   });
   if (result.status === 200) {
-    return result.data as LautFmSong[];
+    return result.data;
   } else {
     return undefined;
   }
@@ -64,11 +64,11 @@ export async function fetchLastSongs(
 export async function fetchStationListeners(
   station: string
 ): Promise<number | undefined> {
-  const result = await axios({
+  const result = await axios<number>({
     url: `${config.baseUrl}/station/${station}/listeners`,
   });
   if (result.status === 200) {
-    return result.data as number;
+    return result.data;
   } else {
     return undefined;
   }

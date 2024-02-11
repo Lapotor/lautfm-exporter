@@ -1,4 +1,4 @@
-import { Config } from 'types';
+import { Config } from './types';
 import ms from 'ms';
 
 export const config: Config = {

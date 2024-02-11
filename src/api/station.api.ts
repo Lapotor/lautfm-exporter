@@ -1,6 +1,6 @@
 import axios from 'axios';
-import { config } from 'config';
-import { LautFmSong, LautFmStation } from 'types';
+import { config } from '../config';
+import { LautFmSong, LautFmStation } from '../types';
 
 /**
  * Fetches a LautFmStation by its name.

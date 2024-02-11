@@ -1,5 +1,5 @@
-import { fetchLautFmServerStatus } from 'api';
-import { lautfm_server_running } from 'metrics';
+import { fetchLautFmServerStatus } from '../api';
+import { lautfm_server_running } from '../metrics';
 
 export async function collectServerStatusMetrics() {
   const serverStatus = await fetchLautFmServerStatus();

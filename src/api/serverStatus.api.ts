@@ -1,6 +1,6 @@
 import axios from 'axios';
-import { LautFmServerStatus } from 'types';
-import { config } from 'config';
+import { LautFmServerStatus } from '../types';
+import { config } from '../config';
 
 export async function fetchLautFmServerStatus(): Promise<
   LautFmServerStatus | undefined

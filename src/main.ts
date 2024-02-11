@@ -1,8 +1,8 @@
 import express from 'express';
 import promClient from 'prom-client';
 import ms from 'ms';
-import { collectMetrics } from 'data-fetcher';
-import { config } from 'config';
+import { collectMetrics } from './data-fetcher';
+import { config } from './config';
 
 //promClient.collectDefaultMetrics();
 

@@ -1,5 +1,8 @@
-import { collectServerStatusMetrics, collectStationMetrics } from 'collectors';
-import { config } from 'config';
+import {
+  collectServerStatusMetrics,
+  collectStationMetrics,
+} from './collectors';
+import { config } from './config';
 
 export async function collectMetrics() {
   const promises = [

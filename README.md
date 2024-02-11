@@ -29,7 +29,7 @@ docker run -d \
   -p 9991:9991 \
   -e STATIONS="eins,zwei" \
   -e FETCH_INTERVAL=5m
-  ghcr.io/Lapotor/lautfm-exporter:latest
+  ghcr.io/lapotor/lautfm-exporter:latest
 ```
 
 Then you can collect the metrics on `http://localhost:9991/metrics`
@@ -41,7 +41,7 @@ version: "3"
 
 services:
   lautfm-exporter:
-    image: ghcr.io/Lapotor/lautfm-exporter:latest
+    image: ghcr.io/lapotor/lautfm-exporter:latest
     container_name: lautfm-exporter
     restart: unless-stopped
     environment:

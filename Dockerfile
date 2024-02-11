@@ -26,10 +26,6 @@ COPY --from=build /app/dist ./
 
 EXPOSE 9991
 
-HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 \
-    CMD curl -f http://localhost:9991/metrics || exit 1
-
 CMD [ "node" , "main.js"]
 
-
-
+HEALTHCHECK --timeout=10s CMD wget --no-verbose --tries=1 --spider http://localhost:9991/metrics

@@ -21,7 +21,7 @@ collectMetrics();
 
 const metricServer = express();
 
-metricServer.get('/metrics', async (req, res) => {
+metricServer.get('/metrics', async (_, res) => {
   const data = await promClient.register.metrics();
   res.set('Content-Type', promClient.register.contentType);
   res.send(data);

@@ -1,4 +1,4 @@
-FROM node:20-alpine as build
+FROM node:22-alpine as build
 
 WORKDIR /app
 
@@ -10,7 +10,7 @@ COPY . .
 
 RUN npm run build
 
-FROM node:20-alpine as production
+FROM node:22-alpine as production
 
 LABEL maintainer="Lapotor <17144397+Lapotor@users.noreply.github.com>"
 

@@ -33,6 +33,6 @@ jobs:
         run: zip -r -q -9 -X lautfm-exporter_${{ github.ref_name }}.zip dist/ package.json package-lock.json
 
       - name: Upload zip file as asset
-        uses: softprops/action-gh-release@4634c16e79c963813287e889244c50009e7f0981
+        uses: softprops/action-gh-release@a485adba73bc95d9848c86e019d675bac99de0ed
         with:
           files: lautfm-exporter_${{ github.ref_name }}.zip
